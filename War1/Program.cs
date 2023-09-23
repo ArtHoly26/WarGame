@@ -3,7 +3,6 @@
 ConsoleKeyInfo choise;
 bool flag = false;
 Player player1 = new Player();
-EnemyOrk ork1 = new EnemyOrk();
 Inventory inventory = new Inventory();
 
 do
@@ -178,12 +177,15 @@ do
         case ConsoleKey.D1:
             player1.PrintInfo();
             Console.ReadKey();
+            Console.Clear();
             break;
         case ConsoleKey.D2:
             inventory.ShowInventory();
             Console.ReadKey();
+            Console.Clear();
             break;
         case ConsoleKey.D3:
+            EnemyOrk ork1 = new EnemyOrk();
             ork1.PrintInfo();
             bool flag1 = false;
             int round = 1;
@@ -212,7 +214,8 @@ do
                 }
                 round++;
             } while (!flag1);
-
+            Console.ReadKey();
+            Console.Clear();
             break;
         case ConsoleKey.D4:
             flag = true;

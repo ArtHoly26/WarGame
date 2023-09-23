@@ -71,7 +71,7 @@
         public void Attack(EnemyOrk enemy, Player player)
         {
             Console.WriteLine($"Атакует {this.Name} наносит {this.damage} урона!"); ;
-            if (player.defence >= enemy.damage) Console.WriteLine("Весь урон заблокирован!");
+            if (enemy.defence >= player.damage) Console.WriteLine("Весь урон заблокирован!");
             else
             {
                 enemy.Health -= player.damage - enemy.defence;
